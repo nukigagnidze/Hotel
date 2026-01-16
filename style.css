@@ -1,0 +1,287 @@
+/* ყველა ელემენტის reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* მთლიანი გვერდის ფონი */
+body {
+    background: #111;
+    color: white;
+}
+
+/* ჰედერი */
+.header {
+    position: fixed;          /* ყოველთვის ზემოთ */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    z-index: 1000;
+}
+
+/* navbar */
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 1rem;
+    display: flex;            /* ელემენტები ერთ ხაზზე */
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ლოგო */
+.logo-link {
+    font-size: 22px;
+    font-weight: bold;
+    color: red;
+}
+
+/* ლოგოს მეორე ნაწილი */
+.logo-link span {
+    color: black;
+    font-weight: normal;
+}
+
+/* ნავიგაცია */
+.navigation {
+    display: flex;
+    gap: 1rem;
+}
+
+/* ლინკები */
+.link {
+    color: black;
+    position: relative;
+}
+
+/* ხაზის ეფექტი hover-ზე */
+.link::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background: red;
+    transform: translateX(-50%);
+    transition: 0.3s;
+}
+
+.link:hover::after {
+    width: 60%;
+}
+
+/* მენიუს აიქონი (მობილურზე) */
+.menu {
+    display: none;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* ყველა გვერდის მთავარი სექცია */
+.page {
+    min-height: 100vh;        /* მთელი ეკრანის სიმაღლე */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 80px;        /* ჰედერისთვის ადგილი */
+    background-size: cover;
+    background-position: center;
+}
+
+/* გვერდის შიდა კონტენტი */
+.page-content {
+    background: rgba(0,0,0,0.6);   /* მუქი ფონი */
+    padding: 3rem;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 600px;
+}
+
+/* სათაურები */
+.page-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+/* ტექსტი */
+.page-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* ღილაკი */
+.page-content button {
+    margin-top: 1rem;
+    padding: 14px 36px;
+    border-radius: 30px;
+    border: none;
+    background: red;
+    color: white;
+    cursor: pointer;
+}
+
+/* HOME გვერდის ბაქრაუნდი */
+.home {
+    background:linear-gradient(#0006,#0006),url("./images/35 Best Hotels in Los Angeles, From Santa Monica to Downtown.jfif");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ABOUT გვერდის ბაქრაუნდი */
+.about {
+    background:linear-gradient(#0006,#0006),url("./images/35 Best Hotels in Los Angeles, From Santa Monica to Downtown.jfif");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* SERVICES გვერდის ბაქრაუნდი */
+.services {
+    background:linear-gradient(#0006,#0006),url("./images/35 Best Hotels in Los Angeles, From Santa Monica to Downtown.jfif");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* NEWS გვერდის ბაქრაუნდი */
+.news {
+    background:linear-gradient(#0006,#0006),url("./images/35 Best Hotels in Los Angeles, From Santa Monica to Downtown.jfif");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CONTACT გვერდის ბაქრაუნდი */
+.contact {
+    background:linear-gradient(#0006,#0006),url("./images/35 Best Hotels in Los Angeles, From Santa Monica to Downtown.jfif");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* მობილური ვერსია */
+@media (max-width: 900px) {
+
+    /* ნავიგაცია ჩამოდის */
+    .navigation {
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background: white;
+        padding: 1rem;
+        border-radius: 12px;
+        display: none;
+        flex-direction: column;
+    }
+
+    /* JS-ით გამოჩნდება */
+    .navigation.active {
+        display: flex;
+    }
+
+    /* მენიუს აიქონი გამოჩნდება */
+    .menu {
+        display: block;
+    }
+}
+
+/* Glass effect (ლუქს ეფექტი) */
+.glass {
+    background: rgba(0, 0, 0, 0.55);
+    border: 1px solid rgba(255,255,255,0.15);
+}
+
+/* პატარა badge ზემოთ */
+.badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #ff0033, #ff6a00);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+/* Home ტექსტის ანიმაცია */
+.home h1 {
+    animation: fadeUp 1s ease forwards;
+}
+
+.home p {
+    margin-top: 1rem;
+    opacity: 0.9;
+    animation: fadeUp 1.4s ease forwards;
+}
+
+/* ღილაკების კონტეინერი */
+.home-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+/* მთავარი ღილაკი */
+.primary-btn {
+    padding: 14px 38px;
+    border-radius: 30px;
+    border: none;
+    background: linear-gradient(135deg, #ff0033, #ff6a00);
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.primary-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(255,0,0,0.4);
+}
+
+/* მეორადი ღილაკი */
+.secondary-btn {
+    padding: 14px 38px;
+    border-radius: 30px;
+    border: 2px solid white;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.secondary-btn:hover {
+    background: white;
+    color: black;
+}
+
+/* ტექსტის გამოჩენის ანიმაცია */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
